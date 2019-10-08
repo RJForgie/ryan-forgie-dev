@@ -29,7 +29,9 @@ const Layout = ({ children }) => {
     <div className="flex flex-col min-h-screen">
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="flex-grow">
-        <main className="mx-auto">{children}</main>
+        <main className="hero mx-auto flex flex-col sm:flex-row justify-between p-16">
+          {children}
+        </main>
       </div>
       <Footer />
     </div>
