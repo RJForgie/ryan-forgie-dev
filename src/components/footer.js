@@ -6,17 +6,26 @@ import GatsbyIcon from "../assets/gatsby.svg"
 
 const Footer = () => {
   return (
-    <footer className="text-gray-500">
-      <div className="flex flex-col lg:flex-row items-center justify-between py-8 bg-gray-900">
-        <div className="flex items-center bg-gray-900">
+    <footer>
+      <div className="flex flex-col lg:flex-row items-center justify-between px-4 py-3 bg-gray-700">
+        <div className="flex items-center h-10 bg-gray-700">
           <Link>
-            <GitHubIcon className="h-6 w-6 mr-8 fill-current" />
+            <GitHubIcon
+              className="h-6 w-6 mr-8 fill-current text-white"
+              to="test"
+            />
           </Link>
           <Link>
-            <LinkedInIcon className="h-6 w-6 mr-8 fill-current" />
+            <LinkedInIcon
+              className="h-6 w-6 mr-8 fill-current text-white"
+              to="test"
+            />
           </Link>
           <Link>
-            <GatsbyIcon className="h-6 w-6 mr-8 fill-current" />
+            <GatsbyIcon
+              className="h-6 w-6 mr-8 fill-current text-white"
+              to="test"
+            />
           </Link>
         </div>
       </div>

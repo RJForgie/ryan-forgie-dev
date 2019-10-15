@@ -11,18 +11,16 @@ const Header = ({ siteTitle }) => {
     setIsMenuOpen(!isMenuOpen)
   }
   return (
-    <header className="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
+    <header className="bg-gray-700 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
       <div className="flex items-center justify-between px-4 py-3 sm:p-0">
-        <div>
-          <h1 className="h-8 text-gray-500">
-            <Link to="/">{siteTitle}</Link>
-          </h1>
+        <div className="h-10 text-white flex items-center">
+          <Link to="/">{siteTitle}</Link>
         </div>
         <div className="sm:hidden">
           <button
             onClick={handleMenuToggle}
             type="button"
-            className="block text-gray-500 hover:text-white focus:text-white focus:outline-none"
+            className="block text-white hover:text-gray-900 focus:text-white focus:outline-none"
           >
             {isMenuOpen ? (
               <Close className="h-6 w-6 fill-current" />
