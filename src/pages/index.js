@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import HeadShot from "../images/HeadShot.jpg"
 
 const IndexPage = () => (
   <Layout>
@@ -19,6 +20,7 @@ const IndexPage = () => (
         I'll be adding examples of my work to this site but for now please check
         out my GitHub at the link below.
       </p>
+      {/* <img src={HeadShot} /> */}
     </div>
   </Layout>
 )
