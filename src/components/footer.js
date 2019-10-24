@@ -5,7 +5,7 @@ import LinkedInIcon from "../assets/linkedin.svg"
 const Footer = () => {
   return (
     <footer>
-      <div className="flex flex-col lg:flex-row items-center justify-between px-4 py-3 bg-gray-700">
+      <div className="flex flex-col sm:flex-row items-center justify-between px-4 py-3 bg-gray-700">
         <div className="flex items-center justify-between h-10 bg-gray-700">
           <a href="https://github.com/RJForgie">
             <GitHubIcon className="h-6 w-6 mr-8 fill-current text-white" />
