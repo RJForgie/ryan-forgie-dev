@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="flex flex-col min-h-screen text-gray-700 font-sans">
+    <div className="flex flex-col min-h-screen bg-gray-200 text-gray-700 font-sans">
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="flex-grow">
         <main className="hero mx-auto flex flex-col sm:flex-row justify-between p-16">
