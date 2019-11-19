@@ -1,15 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
-import headshot from "../images/headshot.jpg"
 
 export default () => (
   <Layout>
     <div className="flex flex-col md:flex-row">
-      <img
-        src={headshot}
-        alt="headshot"
-        className="h-56 w-56 shadow-l rounded-full border-8"
-      />
       <div className="bg-white ml-16">
         <div className="text-2xl">
           I build web applications (mostly with React)
