@@ -45,7 +45,9 @@ export default () => {
         data-netlify="true"
         className="w-full max-w-lg"
         onSubmit={handleSubmit}
+        netifly-honeypot="bot-field"
       >
+        <input type="hidden" name="bot-field" value="contact" />
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
