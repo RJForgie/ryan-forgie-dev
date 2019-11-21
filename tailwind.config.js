@@ -5,6 +5,8 @@ module.exports = {
       sans: ["Chivo", "-apple-system"],
     },
   },
-  variants: {},
+  variants: {
+    opacity: ["responsive", "hover", "focus", "disabled"],
+  },
   plugins: [],
 }
