@@ -33,13 +33,14 @@ export default () => {
   })
 
   const handleSubmit = e => {
-    e.preventDefault()
+    // e.preventDefault()
+    console.log("submitting")
   }
 
   return (
     <Layout>
       <form
-        action="/contact/"
+        action="/"
         name="contact"
         method="POST"
         data-netlify="true"
