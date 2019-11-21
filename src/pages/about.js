@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 export default () => (
   <Layout>
     <div className="flex flex-col md:flex-row">
-      <div className="bg-white ml-16">
+      <div>
         <div className="text-2xl">
           I build web applications (mostly with React)
         </div>

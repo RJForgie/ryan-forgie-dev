@@ -36,19 +36,19 @@ const Header = ({ siteTitle }) => {
         }`}
       >
         <Link
-          className="block px-2 py-1 text-white rounded hover:bg-gray-800 font-semibold"
+          className="block px-2 py-1 text-white rounded hover:bg-gray-800"
           to="/"
         >
           Home
         </Link>
         <Link
-          className="block mt-1 px-2 py-1 text-white rounded hover:bg-gray-800 font-semibold sm:mt-0 sm:ml-2"
+          className="block mt-1 px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
           to="/about/"
         >
           About
         </Link>
         <Link
-          className="block mt-1 px-2 py-1 text-white rounded hover:bg-gray-800 font-semibold sm:mt-0 sm:ml-2"
+          className="block mt-1 px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
           to="/contact/"
         >
           Contact
