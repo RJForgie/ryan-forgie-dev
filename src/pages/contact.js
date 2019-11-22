@@ -27,25 +27,30 @@ export default () => {
         .max(100, "Must be 100 characters or less")
         .required("Required"),
     }),
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2))
-    },
   })
 
-  const handleSubmit = e => {
-    // e.preventDefault()
-    console.log("submitting")
-  }
+  // handleSubmit = e => {
+  //   e.preventDefault()
+  //   const form = this.ContactForm.current
+
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: this.encode({
+  //       "form-name": form.getAttribute("name"),
+  //       ...this.state,
+  //     }),
+  //   })
+  // }
 
   return (
     <Layout>
       <form
-        action="/"
         name="contact"
         method="POST"
         data-netlify="true"
         className="w-full max-w-lg"
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
         netifly-honeypot="bot-field"
       >
         <input type="hidden" name="bot-field" value="contact" />
@@ -98,7 +103,7 @@ export default () => {
             <input
               className="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="email"
-              type="text"
+              type="email"
               {...formik.getFieldProps("email")}
             />
             <p className="text-red-500 text-xs italic">
@@ -128,7 +133,6 @@ export default () => {
         </div>
         <button
           className="disabled:opacity-50 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          type="submit"
           disabled={!formik.isValid}
         >
           Send
