@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from "gatsby-link"
 import { useFormik } from "formik"
 import * as Yup from "yup"
 
@@ -43,15 +44,39 @@ export default () => {
   //   })
   // }
 
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log("formik.values :", formik.values)
+    const form = e.target
+    console.log("form :", form)
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...formik.values,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
+  }
+
   return (
     <Layout>
       <form
+        action="/about/"
         name="contact"
-        method="POST"
+        method="post"
         data-netlify="true"
         className="w-full max-w-lg"
-        // onSubmit={handleSubmit}
         netifly-honeypot="bot-field"
+        onSubmit={handleSubmit}
       >
         <input type="hidden" name="bot-field" value="contact" />
         <div className="flex flex-wrap -mx-3 mb-6">
@@ -134,6 +159,7 @@ export default () => {
         <button
           className="disabled:opacity-50 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           disabled={!formik.isValid}
+          type="submit"
         >
           Send
         </button>
