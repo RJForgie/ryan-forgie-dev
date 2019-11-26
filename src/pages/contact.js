@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from "gatsby-link"
 import { useFormik } from "formik"
 import * as Yup from "yup"
 
@@ -27,25 +28,39 @@ export default () => {
         .max(100, "Must be 100 characters or less")
         .required("Required"),
     }),
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2))
-    },
   })
+
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
 
   const handleSubmit = e => {
     e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...formik.values,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
   }
 
   return (
     <Layout>
       <form
-        action="/contact/"
+        action="/about/"
         name="contact"
-        method="POST"
+        method="post"
         data-netlify="true"
         className="w-full max-w-lg"
-        onSubmit={handleSubmit}
         netifly-honeypot="bot-field"
+        onSubmit={handleSubmit}
       >
         <input type="hidden" name="bot-field" value="contact" />
         <div className="flex flex-wrap -mx-3 mb-6">
@@ -97,7 +112,7 @@ export default () => {
             <input
               className="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="email"
-              type="text"
+              type="email"
               {...formik.getFieldProps("email")}
             />
             <p className="text-red-500 text-xs italic">
@@ -127,8 +142,8 @@ export default () => {
         </div>
         <button
           className="disabled:opacity-50 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          type="submit"
           disabled={!formik.isValid}
+          type="submit"
         >
           Send
         </button>
