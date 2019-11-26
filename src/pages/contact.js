@@ -30,20 +30,6 @@ export default () => {
     }),
   })
 
-  // handleSubmit = e => {
-  //   e.preventDefault()
-  //   const form = this.ContactForm.current
-
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: this.encode({
-  //       "form-name": form.getAttribute("name"),
-  //       ...this.state,
-  //     }),
-  //   })
-  // }
-
   const encode = data => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -52,9 +38,7 @@ export default () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log("formik.values :", formik.values)
     const form = e.target
-    console.log("form :", form)
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
