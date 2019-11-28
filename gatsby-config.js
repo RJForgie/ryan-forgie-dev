@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ryan Forgie - Software Developer`,
+    title: `Ryan Forgie`,
     description: `Personal site of Ryan Forgie`,
     author: `Ryan Forgie`,
   },
@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
+        name: `markdown-pages`,
         path: `${__dirname}/content/blog`,
       },
     },

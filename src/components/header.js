@@ -49,6 +49,12 @@ const Header = ({ siteTitle }) => {
         </Link>
         <Link
           className="block mt-1 px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
+          to="/notes/"
+        >
+          Notes
+        </Link>
+        <Link
+          className="block mt-1 px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
           to="/contact/"
         >
           Contact
