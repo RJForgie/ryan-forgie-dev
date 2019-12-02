@@ -10,35 +10,26 @@ class Notes extends React.Component {
 
     return (
       <Layout>
-        {posts.map(node => {
-          const title = node.frontmatter.title
-          return (
-            <article key={node.frontmatter.date}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: "5px",
-                  }}
-                >
-                  <Link
-                    style={{ boxShadow: `none` }}
-                    to={node.frontmatter.path}
-                  >
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
+        <div className="border w-full">
+          <h4 className="py-3 px-5 border-b">Test Title</h4>
+          <div className="p-5">
+            <ul className="list-disc list-inside">
+              {posts.map(node => {
+                const title = node.frontmatter.title
+                return (
+                  <li key={node.frontmatter.date}>
+                    <Link
+                      className="underline text-blue-700"
+                      to={node.frontmatter.path}
+                    >
+                      {title}
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        </div>
       </Layout>
     )
   }

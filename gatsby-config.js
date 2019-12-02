@@ -21,8 +21,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/content/blog`,
+        name: `notes`,
+        path: `${__dirname}/content/notes`,
       },
     },
     `gatsby-transformer-sharp`,
