@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => {
     setIsMenuOpen(!isMenuOpen)
   }
   return (
-    <header className="bg-gray-700 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
+    <header className="bg-teal-700 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
       <div className="flex items-center justify-between px-4 py-3 sm:p-0">
         <div className="h-10 text-white flex items-center">
           <Link to="/">{siteTitle}</Link>
@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => {
           <button
             onClick={handleMenuToggle}
             type="button"
-            className="block text-white hover:text-gray-900 focus:text-white focus:outline-none"
+            className="block text-white focus:text-white focus:outline-none"
           >
             {isMenuOpen ? (
               <Close className="h-6 w-6 fill-current" />
@@ -31,30 +31,30 @@ const Header = ({ siteTitle }) => {
         </div>
       </div>
       <div
-        className={`px-2 pt-2 pb-4 sm:flex sm:p-0 ${
+        className={`px-2 pb-4 sm:flex sm:p-0 ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >
         <Link
-          className="block px-2 py-1 text-white rounded hover:bg-gray-800"
+          className="block mx-2 my-1 text-white text-link half-width"
           to="/"
         >
           Home
         </Link>
         <Link
-          className="block mt-1 px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
+          className="block mt-1 mx-2 my-1 text-white text-link"
           to="/about/"
         >
           About
         </Link>
         <Link
-          className="block mt-1 px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
+          className="block mt-1 mx-2 my-1 text-white text-link"
           to="/notes/"
         >
           Notes
         </Link>
         <Link
-          className="block mt-1 px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
+          className="block mt-1 mx-2 my-1 text-white text-link"
           to="/contact/"
         >
           Contact

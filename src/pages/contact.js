@@ -53,6 +53,10 @@ export default () => {
 
   return (
     <Layout>
+      <p className="pb-4">
+        If you'd like get in touch please fill out the form below and i'll get
+        back to you as soon as possible
+      </p>
       <form
         action="/about/"
         name="contact"
@@ -72,7 +76,7 @@ export default () => {
               First Name
             </label>
             <input
-              className="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="appearance-none block w-full shadow text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
               id="first-name"
               type="text"
               {...formik.getFieldProps("firstName")}
@@ -90,7 +94,7 @@ export default () => {
               Last Name
             </label>
             <input
-              className="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="appearance-none block w-full shadow text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="last-name"
               type="text"
               {...formik.getFieldProps("lastName")}
@@ -110,7 +114,7 @@ export default () => {
               Email
             </label>
             <input
-              className="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="appearance-none block w-full shadow text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="email"
               type="email"
               {...formik.getFieldProps("email")}
@@ -129,7 +133,7 @@ export default () => {
               Message
             </label>
             <textarea
-              className="appearance-none block w-full bg-gray-300 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="appearance-none block w-full shadow text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="message"
               type="text"
               rows="4"
@@ -141,7 +145,7 @@ export default () => {
           </div>
         </div>
         <button
-          className="disabled:opacity-50 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="disabled:opacity-50 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:shadow-outline"
           disabled={!formik.isValid}
           type="submit"
         >
