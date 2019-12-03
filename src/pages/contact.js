@@ -53,10 +53,6 @@ export default () => {
 
   return (
     <Layout>
-      <p className="pb-4">
-        If you'd like get in touch please fill out the form below and i'll get
-        back to you as soon as possible
-      </p>
       <form
         action="/about/"
         name="contact"
@@ -66,6 +62,10 @@ export default () => {
         netifly-honeypot="bot-field"
         onSubmit={handleSubmit}
       >
+        <p className="pb-4">
+          If you'd like get in touch please fill out the form below and i'll get
+          back to you as soon as possible
+        </p>
         <input type="hidden" name="bot-field" value="contact" />
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
