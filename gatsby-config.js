@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ryan Forgie - Software Developer`,
+    title: `Ryan Forgie`,
     description: `Personal site of Ryan Forgie`,
     author: `Ryan Forgie`,
   },
@@ -10,11 +10,19 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `notes`,
+        path: `${__dirname}/content/notes`,
       },
     },
     `gatsby-transformer-sharp`,

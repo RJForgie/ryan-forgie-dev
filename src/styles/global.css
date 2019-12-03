@@ -3,3 +3,8 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.text-link:hover {
+    transition: all .2s ease-in;
+    box-shadow: 0 2px white;
+}

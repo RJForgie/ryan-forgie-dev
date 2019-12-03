@@ -1,21 +1,51 @@
 import React from "react"
 import Layout from "../components/layout"
+import Code from "../assets/code.svg"
 
 export default () => (
   <Layout>
     <div className="flex flex-col md:flex-row">
       <div>
-        <div className="text-2xl">
-          I build web applications (mostly with React)
+        <div className="text-2xl pb-10">
+          I build web applications with these technologies:
         </div>
-        <div className="text">Here are my Core Skills:</div>
-        <ul className="list-disc">
-          <li>Modern JavaScript / TypeScript</li>
-          <li>State Management (Redux / Context)</li>
-          <li>Mobile First Design (SCSS and Tailwind CSS)</li>
-          <li>Static Sites (Gatbsy)</li>
-          <li>Unit Testing (Jest / Enzyme / React Testing Library)</li>
-          <li>UI Test Automation (Cypress / Selenium)</li>
+        <ul>
+          <li>
+            <Code className="h-6 w-6 fill-current inline-block mr-2" />
+            <span className="inline-block">React</span>
+          </li>
+          <li>
+            <Code className="h-6 w-6 fill-current inline-block mr-2" />
+            <span className="inline-block">Modern JavaScript / TypeScript</span>
+          </li>
+          <li>
+            <Code className="h-6 w-6 fill-current inline-block mr-2" />
+            <span className="inline-block">
+              State Management (Redux / Context)
+            </span>
+          </li>{" "}
+          <li>
+            <Code className="h-6 w-6 fill-current inline-block mr-2" />
+            <span className="inline-block">
+              Mobile First Design (SCSS and Tailwind CSS)
+            </span>
+          </li>{" "}
+          <li>
+            <Code className="h-6 w-6 fill-current inline-block mr-2" />
+            <span className="inline-block">Static Sites (Gatbsy)</span>
+          </li>{" "}
+          <li>
+            <Code className="h-6 w-6 fill-current inline-block mr-2" />
+            <span className="inline-block">
+              Unit Testing (Jest / React Testing Library)
+            </span>
+          </li>{" "}
+          <li>
+            <Code className="h-6 w-6 fill-current inline-block mr-2" />
+            <span className="inline-block text-wra">
+              UI Test Automation (Cypress / Selenium)
+            </span>
+          </li>
         </ul>
       </div>
     </div>
