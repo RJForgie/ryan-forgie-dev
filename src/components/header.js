@@ -1,8 +1,9 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, { useState } from "react"
-import Menu from "../assets/menu.svg"
-import Close from "../assets/close.svg"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+import Navlink from './navlink'
+import Menu from '../assets/menu.svg'
+import Close from '../assets/close.svg'
 
 const Header = ({ siteTitle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -23,42 +24,22 @@ const Header = ({ siteTitle }) => {
             className="block text-white focus:text-white focus:outline-none"
           >
             {isMenuOpen ? (
-              <Close className="h-6 w-6 fill-current" />
+              <Close className="nav-icon" />
             ) : (
-              <Menu className="h-6 w-6 fill-current" />
+              <Menu className="nav-icon" />
             )}
           </button>
         </div>
       </div>
       <div
         className={`px-2 pb-4 sm:flex sm:p-0 ${
-          isMenuOpen ? "block" : "hidden"
+          isMenuOpen ? 'block' : 'hidden'
         }`}
       >
-        <Link
-          className="block mx-2 my-1 text-white text-link half-width"
-          to="/"
-        >
-          Home
-        </Link>
-        <Link
-          className="block mt-1 mx-2 my-1 text-white text-link"
-          to="/about/"
-        >
-          About
-        </Link>
-        <Link
-          className="block mt-1 mx-2 my-1 text-white text-link"
-          to="/notes/"
-        >
-          Notes
-        </Link>
-        <Link
-          className="block mt-1 mx-2 my-1 text-white text-link"
-          to="/contact/"
-        >
-          Contact
-        </Link>
+        <Navlink to="/" linkText="Home" />
+        <Navlink to="/about/" linkText="About" />
+        <Navlink to="/notes/" linkText="Notes" />
+        <Navlink to="/contact/" linkText="Contact" />
       </div>
     </header>
   )
@@ -66,10 +47,6 @@ const Header = ({ siteTitle }) => {
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header

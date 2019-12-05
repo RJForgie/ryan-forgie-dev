@@ -4,7 +4,32 @@
 
 @tailwind utilities;
 
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
 .text-link:hover {
     transition: all .2s ease-in;
     box-shadow: 0 2px white;
+}
+
+.nav-icon {
+    @apply h-6 w-6 fill-current;
+}
+
+.standard-input {
+    @apply appearance-none block w-full shadow text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight;
+}
+
+.standard-input:focus {
+    @apply outline-none bg-white;
+}
+
+.input-label {
+    @apply block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2;
+}
+
+.validation-text {
+    @apply text-red-500 text-xs italic;
 }
