@@ -134,7 +134,7 @@ export default () => {
         </div>
         <button
           className="disabled:opacity-50 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:shadow-outline"
-          disabled={!formik.isValid}
+          disabled={!formik.isValid || !formik.dirty}
           type="submit"
         >
           Send
