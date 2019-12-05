@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fe28c5fc-aa22-439f-91f6-9a165adfd424/deploy-status)](https://app.netlify.com/sites/ryanforgiedev/deploys)
+
 # Personal Site
 
 This is the personal website of Ryan Forgie, a software developer based in Edinburgh (Scotland).
@@ -8,7 +10,7 @@ This project was built with:
 - React
 - Gatsby
 - Formik
-- Netifly CMS
+- Netlify CMS
 - Tailwind CSS
 
 Tested with:
@@ -16,7 +18,7 @@ Tested with:
 - React Testing Library
 
 and is Deployed and hosted with:
-- Netifly
+- Netlify
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
