@@ -5,6 +5,10 @@
   "version": "0.1.0",
   "author": "Ryan Forgie <ryan.j.forgie@gmail.com>",
   "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "formik": "2.0.4",
     "gatsby": "^2.18.4",
     "gatsby-image": "^2.2.23",
@@ -27,6 +31,8 @@
     "yup": "0.27.0"
   },
   "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-react-app": "^5.0.2",
     "prettier": "^1.18.2",
     "tailwindcss": "^1.1.2"
   },
